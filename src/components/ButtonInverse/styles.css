@@ -1,0 +1,5 @@
+.dsc-btn-white {
+  color: var(--dsc-color-font-quaternary);
+  background-color: var(--dsc-color-btn-inverse);
+  border: 1px solid var(--dsc-color-card-border-secondary);
+}

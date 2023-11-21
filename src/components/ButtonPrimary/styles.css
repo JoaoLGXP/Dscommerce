@@ -1,0 +1,5 @@
+.dsc-btn-blue {
+  color: var(--dsc-color-font-tertiary);
+  border: none;
+  background-color: var(--dsc-color-btn-primary);
+}
