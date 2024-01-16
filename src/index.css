@@ -270,7 +270,7 @@ nav a {
 }
 
 @media (min-width: 576px) {
-  .dsc-btn {
+  .dsc-btns {
     width: 220px;
   }
 }
