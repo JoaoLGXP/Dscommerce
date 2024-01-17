@@ -117,7 +117,7 @@ nav a {
 }
 
 .dsc-admin-icon {
-  padding-right: 14px;
+  margin-right: 14px;
   width: 20px;
   height: 20px;
 }
@@ -139,16 +139,6 @@ nav a {
 .dsc-cart-icon {
   display: flex;
   margin-right: 20px;
-}
-
-.dsc-admin-icon img {
-  width: 20px;
-  height: 20px;
-}
-
-.dsc-cart-icon img {
-  width: 20px;
-  height: 20px;
 }
 
 .dsc-navigation-bar-admin {
