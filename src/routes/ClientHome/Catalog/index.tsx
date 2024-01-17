@@ -24,7 +24,6 @@ export default function Catalog() {
   });
 
   useEffect(() => {
-
     productService.findPageRequest(queryParams.page, queryParams.name)
       .then(response => {
         const nextPage = response.data.content;
