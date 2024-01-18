@@ -1,6 +1,7 @@
 import './styles.css';
 import homeIcon from '../../assets/home.svg';
 import productsIcon from '../../assets/products.svg';
+import LoggedUser from '../LoggedUser';
 
 export default function HeaderAdmin() {
 
@@ -17,10 +18,7 @@ export default function HeaderAdmin() {
                         <img src={productsIcon} alt="Produtos"/>
                             <p>Produtos</p>
                     </div>
-                    <div className="dsc-admin-login">
-                        <p>Maria Silva</p>
-                        <a href="#">Sair</a>
-                    </div>
+                    <LoggedUser />
                 </div>
             </nav>
         </header>
