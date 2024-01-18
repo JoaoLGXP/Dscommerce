@@ -1,13 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import "./styles.css";
 import * as cartService from "../../../services/cart-service";
+import * as orderService from "../../../services/order-service";
 import { OrderDTO } from "../../../models/order";
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ContextCartCount } from "../../../utils/context-cart";
 
 
 export default function Cart() {
+
+    const navigate = useNavigate();
 
     const [cart, setCart] = useState<OrderDTO>(cartService.getCart);
 
@@ -32,6 +35,15 @@ export default function Cart() {
         const newCart = cartService.getCart();
         setCart(newCart);
         setContextCartCount(newCart.items.length);
+    }
+
+    function handlePlaceOrderClick() {
+        orderService.placeOrderRequest(cart)
+            .then(response => {
+                cartService.clearCart();
+                setContextCartCount(0);
+                navigate(`/confirmation/${response.data.id}`);
+            })
     }
 
     return (
@@ -76,7 +88,7 @@ export default function Cart() {
 
                 }
                 <div className="dsc-btns">
-                    <button className="dsc-btn dsc-btn-blue">Finalizar pedido</button>
+                    <button onClick={handlePlaceOrderClick} className="dsc-btn dsc-btn-blue">Finalizar pedido</button>
                     <Link to="/catalog">
                         <button className="dsc-btn dsc-btn-white">Continuar comprando</button>
                     </Link>
