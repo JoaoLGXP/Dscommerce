@@ -3,8 +3,8 @@ import ButtonPrimary from '../../../components/ButtonPrimary';
 import './styles.css';
 
 export default function ProductForm() {
-    return (
-        <main>
+  return (
+    <main>
       <section id="product-form-section" className="dsc-container">
         <div className="dsc-card-product-form">
           <div className="dsc-product-form dsc-margin-bottom">
@@ -36,10 +36,7 @@ export default function ProductForm() {
             <ButtonPrimary text='Salavar' />
           </div>
         </div>
-
-
-
       </section>
     </main>
-    );
+  );
 }
