@@ -33,7 +33,7 @@ export default function ProductForm() {
           </div>
           <div className="dsc-btns-product-form">
             <ButtonInverse text='Cancelar' />
-            <ButtonPrimary text='Salavar' />
+            <ButtonPrimary text='Salvar' />
           </div>
         </div>
       </section>
