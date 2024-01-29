@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import "./styles.css";
 import * as productService from "../../../services/product-service";
 import ButtonInverse from "../../../components/ButtonInverse";
@@ -34,6 +35,15 @@ export default function ProductListing() {
             });
     }, [queryParams]);
 
+    function handleSearch(searchText: string) {
+        setProducts([]);
+        setQueryParams({ ...queryParams, page: 0, name: searchText });
+    }
+
+    function handleNextPageClick() {
+        setQueryParams({ ...queryParams, page: queryParams.page + 1 });
+    }
+
     return (
         <main>
             <section id="product-listing-section" className="dsc-container">
@@ -44,21 +54,23 @@ export default function ProductListing() {
                     <ButtonInverse text="Novo" />
                 </div>
                 <div className="dsc-margin-bottom">
-                    <SearchBar />
+                    <SearchBar onSearch={handleSearch} />
                 </div>
                 <table className="dsc-table">
                     <thead>
-                        <th className="dsc-tb576">ID</th>
-                        <th></th>
-                        <th className="dsc-tb768">Preço</th>
-                        <th className="dsc-txt-left">Nome</th>
-                        <th></th>
-                        <th></th>
+                        <tr>
+                            <th className="dsc-tb576">ID</th>
+                            <th></th>
+                            <th className="dsc-tb768">Preço</th>
+                            <th className="dsc-txt-left">Nome</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
                     </thead>
                     <tbody>
                         {
                             products.map(product => (
-                                <tr>
+                                <tr key={product.id}>
                                     <td className="dsc-tb576">{product.id}</td>
                                     <td>
                                         <img
@@ -88,7 +100,13 @@ export default function ProductListing() {
                         }
                     </tbody>
                 </table>
-                <LoadMoreButton />
+                {
+                    !isLastPage &&
+                    <div onClick={handleNextPageClick}>
+                        <LoadMoreButton />
+                    </div>
+                }
+
             </section>
         </main>
     );
