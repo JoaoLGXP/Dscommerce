@@ -1,0 +1,111 @@
+#product-form-section {
+    padding: 20px 0;
+}
+
+.dsc-card-product-form {
+    background-color: var(--dsc-color-card-bg);
+    border-radius: 4px;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.dsc-product-form {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dsc-color-font-primary);
+}
+
+.dsc-product-form-container {
+    display: grid;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.dsc-product-form-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: var(--dsc-color-font-primary);
+    border: 1px solid var(--dsc-color-card-border);
+}
+
+.dsc-product-form-input:focus {
+    outline: none;
+}
+
+.dsc-product-form-input::placeholder {
+    color: var(--dsc-color-font-placeholder);
+}
+
+.dsc-product-form-description-input {
+    width: 100%;
+    height: 128px;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 4px;
+    color: var(--dsc-color-font-primary);
+    border: 1px solid var(--dsc-color-card-border);
+    resize: none;
+}
+
+.dsc-product-form-description-input {
+    outline: none;
+}
+
+.dsc-product-form-description-input::placeholder {
+    color: var(--dsc-color-font-placeholder);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dsc-select:invalid {
+    color: var(--dsc-color-font-placeholder);
+}
+
+.dsc-select option[disabled] {
+    display: none;
+}
+
+.dsc-select option {
+    color: var(--dsc-color-font-primary);
+}
+
+.dsc-btns-product-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+
+@media (min-width: 576px) {
+    #product-form-section {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dsc-card-product-form {
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    .dsc-btns-product-form {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .dsc-product-form {
+        font-size: 24px;
+    }
+
+    .space-top {
+        padding-top: 10px;
+    }
+}

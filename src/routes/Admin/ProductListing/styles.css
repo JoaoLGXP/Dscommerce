@@ -1,0 +1,56 @@
+#confirmation-section {
+    padding: 20px 0;
+}
+
+.dsc-home-page-message {
+    text-align: center;
+    color: var(--dsc-color-font-primary);
+}
+
+.dsc-home-page-message h3 {
+    font-size: 16px;
+}
+
+.dsc-product-registration {
+    text-align: center;
+    color: var(--dsc-color-font-primary);
+}
+
+.dsc-product-registration h3 {
+    font-size: 16px;
+}
+
+.dsc-product-listing-image {
+    width: 69px;
+    height: 69px;
+    display: block;
+}
+
+.dsc-product-listing-btn {
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+    margin: 5px;
+}
+
+@media (min-width: 576px) {
+    .dsc-home-page-message {
+        text-align: left;
+    }
+    
+    .dsc-home-page-message h3 {
+        font-size: 24px;
+    }
+
+    .dsc-product-registration {
+        text-align: left;
+    }
+
+    .dsc-product-registration h3 {
+        font-size: 24px;
+    }
+    
+    .space-top {
+        padding-top: 10px;
+    }
+}
