@@ -97,8 +97,8 @@
     }
 
     .dsc-btns-product-form {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .dsc-product-form {
@@ -109,3 +109,16 @@
         padding-top: 10px;
     }
 }
+
+/* campo de categorias e campo de text area do ProductForm - index.tsx
+            <div>
+              <select className="dsc-product-form-input dsc-select" required>
+                <option value="" disabled selected>Categorias</option>
+                <option value="1">Valor 1</option>
+                <option value="2">Valor 2</option>
+              </select>
+            </div>
+            <div>
+              <textarea className="dsc-product-form-description-input" placeholder="Descrição"></textarea>
+            </div>
+*/

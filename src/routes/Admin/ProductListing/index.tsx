@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { ProductDTO } from "../../../models/product";
 import DialogInfo from "../../../components/DialogInfo";
 import DialogConfirmation from "../../../components/DialogConfirmation";
+import { useNavigate } from "react-router-dom";
 
 type QueryParams = {
     page: number;
@@ -18,6 +19,8 @@ type QueryParams = {
 
 
 export default function ProductListing() {
+
+    const navigate = useNavigate();
 
     const [dialogInfoData, setDialogInfoData] = useState({
         visible: false,
@@ -47,6 +50,10 @@ export default function ProductListing() {
                 setIsLastPage(response.data.last);
             });
     }, [queryParams]);
+
+    function handleNewProductClick() {
+        navigate("/admin/products/create");
+    }
 
     function handleSearch(searchText: string) {
         setProducts([]);
@@ -90,7 +97,9 @@ export default function ProductListing() {
                     <h3>Cadastro de produtos</h3>
                 </div>
                 <div className="dsc-btns dsc-margin-bottom">
-                    <ButtonInverse text="Novo" />
+                    <div onClick={handleNewProductClick}>
+                        <ButtonInverse text="Novo" />
+                    </div>
                 </div>
                 <div className="dsc-margin-bottom">
                     <SearchBar onSearch={handleSearch} />
