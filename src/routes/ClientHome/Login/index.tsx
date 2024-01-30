@@ -37,14 +37,14 @@ export default function Login() {
 
     function handleSubmit(event: any) {
         event.preventDefault();
-        authService.loginRequest({ username: formData.username.value, password: formData.password.value })
+        authService.loginRequest(forms.toValues(formData))
             .then(response => {
                 authService.saveAccessToken(response.data.access_token);
                 setContextTokenPayload(authService.getAccessTokenPayload());
                 navigate("/cart");
             })
             .catch(error => {
-                console.log("Erro no login", error)
+                console.log("Erro no login", error);
             })
     }
 
