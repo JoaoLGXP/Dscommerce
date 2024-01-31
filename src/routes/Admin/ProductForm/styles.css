@@ -40,11 +40,11 @@
   color: var(--dsc-color-font-placeholder);
 }
 
-.dsc-product-form-input[data-invalid="true"] {
+.dsc-product-form-input[data-dirty="true"][data-invalid="true"] {
   border: 1px solid var(--dsc-color-error);
 }
 
-.dsc-product-form-input[data-invalid="true"] ~ div {
+.dsc-product-form-input[data-dirty="true"][data-invalid="true"] ~ div {
   display: unset;
 }
 
