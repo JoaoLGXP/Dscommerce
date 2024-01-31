@@ -45,9 +45,6 @@ export default function ProductForm() {
 
   useEffect(() => {
 
-    const obj = forms.validate(formData, "price");
-    console.log(obj);
-
     if (isEditing) {
       productService.findById(Number(params.productId))
         .then(response => {
@@ -58,7 +55,9 @@ export default function ProductForm() {
   }, [])
 
   function handleInputChange(event: any) {
-    setFormData(forms.update(formData, event.target.name, event.target.value));
+    const dataUpdated = (forms.update(formData, event.target.name, event.target.value));
+    const dataValidated = forms.validate(dataUpdated, event.target.name);
+    setFormData(dataValidated);
   }
 
   return (
@@ -72,21 +71,22 @@ export default function ProductForm() {
             <div>
               <FormInput
                 {...formData.name}
-                className="dsc-login-input"
+                className="dsc-product-form-input"
                 onChange={handleInputChange}
               />
             </div>
             <div>
               <FormInput
                 {...formData.price}
-                className="dsc-login-input"
+                className="dsc-product-form-input"
                 onChange={handleInputChange}
               />
+              <div className="dsc-form-error">{formData.price.message}</div>
             </div>
             <div>
               <FormInput
                 {...formData.imgUrl}
-                className="dsc-login-input"
+                className="dsc-product-form-input"
                 onChange={handleInputChange}
               />
             </div>
