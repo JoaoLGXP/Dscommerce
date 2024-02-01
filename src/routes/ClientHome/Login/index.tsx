@@ -65,20 +65,20 @@ export default function Login() {
                         <div>
                             <FormInput
                                 {...formData.username}
-                                className="dsc-login-input"
+                                className="dsc-form-input"
                                 onTurnDirty={handleTurnDirty}
                                 onChange={handleInputChange}
                             />
-                            <div className="dsc-error-message"></div>
+                            <div className="dsc-form-error">{formData.username.message}</div>
                         </div>
                         <div>
                             <FormInput
                                 {...formData.password}
-                                className="dsc-login-input dsc-margin-bottom"
+                                className="dsc-form-input dsc-margin-bottom"
                                 onTurnDirty={handleTurnDirty}
                                 onChange={handleInputChange}
                             />
-                            <div className="dsc-error-message"></div>
+                            <div className="dsc-form-error"></div>
                         </div>
                     </div>
                     <ButtonPrimary text='Entrar' />

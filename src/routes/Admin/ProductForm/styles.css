@@ -22,32 +22,6 @@
   width: 100%;
 }
 
-.dsc-product-form-input {
-  width: 100%;
-  height: 40px;
-  padding: 0 20px;
-  font-size: 16px;
-  border-radius: 4px;
-  color: var(--dsc-color-font-primary);
-  border: 1px solid var(--dsc-color-card-border);
-}
-
-.dsc-product-form-input:focus {
-  outline: none;
-}
-
-.dsc-product-form-input::placeholder {
-  color: var(--dsc-color-font-placeholder);
-}
-
-.dsc-product-form-input[data-dirty="true"][data-invalid="true"] {
-  border: 1px solid var(--dsc-color-error);
-}
-
-.dsc-product-form-input[data-dirty="true"][data-invalid="true"] ~ div {
-  display: unset;
-}
-
 .dsc-product-form-description-input {
   width: 100%;
   height: 128px;
@@ -92,13 +66,6 @@
   cursor: pointer;
 }
 
-.dsc-form-error {
-  color: var(--dsc-color-error);
-  font-size: 12px;
-  padding-left: 4px;
-  display: none;
-}
-
 @media (min-width: 576px) {
   #product-form-section {
     display: flex;
@@ -126,7 +93,7 @@
 
 /* campo de categorias e campo de text area do ProductForm - index.tsx
             <div>
-              <select className="dsc-product-form-input dsc-select" required>
+              <select className="dsc-form-input dsc-select" required>
                 <option value="" disabled selected>Categorias</option>
                 <option value="1">Valor 1</option>
                 <option value="2">Valor 2</option>
