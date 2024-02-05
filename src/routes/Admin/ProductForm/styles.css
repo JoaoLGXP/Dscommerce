@@ -63,6 +63,7 @@
 
 .dsc-select option {
   color: var(--dsc-color-font-primary);
+  padding-right: 10px;
 }
 
 .dsc-btns-product-form {

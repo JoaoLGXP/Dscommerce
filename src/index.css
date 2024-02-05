@@ -271,7 +271,7 @@ nav a {
 /*-------------------------------------------------------------*/
 /*form styles*/
 
-.dsc-form-input {
+.dsc-form-control {
   width: 100%;
   height: 40px;
   padding: 0 20px;
@@ -281,19 +281,19 @@ nav a {
   border: 1px solid var(--dsc-color-card-border);
 }
 
-.dsc-form-input:focus {
+.dsc-form-control:focus {
   outline: none;
 }
 
-.dsc-form-input::placeholder {
+.dsc-form-control::placeholder {
   color: var(--dsc-color-font-placeholder);
 }
 
-.dsc-form-input[data-dirty="true"][data-invalid="true"] {
+.dsc-form-control[data-dirty="true"][data-invalid="true"] {
   border: 1px solid var(--dsc-color-error);
 }
 
-.dsc-form-input[data-dirty="true"][data-invalid="true"] ~ div {
+.dsc-form-control[data-dirty="true"][data-invalid="true"] ~ div {
   display: unset;
 }
 
