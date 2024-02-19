@@ -65,7 +65,7 @@ export default function Login() {
                         <div>
                             <FormInput
                                 {...formData.username}
-                                className="dsc-form-input"
+                                className="dsc-form-control"
                                 onTurnDirty={handleTurnDirty}
                                 onChange={handleInputChange}
                             />
@@ -74,7 +74,7 @@ export default function Login() {
                         <div>
                             <FormInput
                                 {...formData.password}
-                                className="dsc-form-input dsc-margin-bottom"
+                                className="dsc-form-control dsc-margin-bottom"
                                 onTurnDirty={handleTurnDirty}
                                 onChange={handleInputChange}
                             />

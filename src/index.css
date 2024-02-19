@@ -304,6 +304,11 @@ nav a {
   display: none;
 }
 
+.dsc-form-select-container {
+  padding: unset;
+  height: unset;
+}
+
 /*-------------------------------------------------------------*/
 /*table styles*/
 
