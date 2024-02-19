@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import "./styles.css";
@@ -100,10 +101,22 @@ export default function ProductForm() {
     setFormData(forms.dirtyAndValidate(formData, name));
   }
 
+  function handleSubmit(event: any) {
+    event.preventDefault();
+
+    const formDataValidated = forms.dirtyAndValidateAll(formData);
+    if (forms.hasAnyInvalid(formDataValidated)) {
+      setFormData(formDataValidated);
+      return;
+    }
+
+    //console.log(forms.toValues(formData));
+  }
+
   return (
     <main>
       <section id="product-form-section" className="dsc-container">
-        <div className="dsc-card-product-form">
+        <form className="dsc-card-product-form" onSubmit={handleSubmit}>
           <div className="dsc-product-form dsc-margin-bottom">
             DADOS DO PRODUTO
           </div>
@@ -168,7 +181,7 @@ export default function ProductForm() {
             </Link>
             <ButtonPrimary text='Salvar' />
           </div>
-        </div>
+        </form>
       </section>
     </main>
   );
