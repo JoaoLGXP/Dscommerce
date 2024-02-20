@@ -30,6 +30,5 @@ export default function FormSelect(props: any) {
 
             />
         </div>
-
     );
 }

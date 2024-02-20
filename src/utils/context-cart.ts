@@ -8,5 +8,5 @@ export type ContextCartCountType = {
 
 export const ContextCartCount = createContext<ContextCartCountType>({
     contextCartCount: 0,
-    setContextCartCount: () => {}
+    setContextCartCount: () => { }
 })

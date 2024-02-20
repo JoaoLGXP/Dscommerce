@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import * as authService from '../../services/auth-service';
-import { useContext } from 'react';
-import { ContextToken } from '../../utils/context-token';
+import { Link } from "react-router-dom";
+import * as authService from "../../services/auth-service";
+import { useContext } from "react";
+import { ContextToken } from "../../utils/context-token";
 
 export default function LoggedUser() {
 
@@ -21,8 +21,8 @@ export default function LoggedUser() {
                 </div>
             )
             : (
-                <Link to='/login'>
-                    <div className='dsc-login'>Entrar</div>
+                <Link to="/login">
+                    <div className="dsc-login">Entrar</div>
                 </Link>
             )
     );

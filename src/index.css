@@ -101,8 +101,13 @@ nav {
 }
 
 nav h1 {
-  font-size: 16px;
+  font-size: 14px;
   margin-right: 5px;
+}
+
+.dsc-logo-header {
+  width: 40px;
+  height: 30px;
 }
 
 nav a {
@@ -139,7 +144,7 @@ nav a {
 
 .dsc-cart-icon {
   display: flex;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .dsc-navigation-bar-admin {
@@ -228,6 +233,16 @@ nav a {
     display: unset;
     font-size: 14px;
   }
+
+  .dsc-cart-icon {
+    margin-right: 20px;
+  }
+
+  .dsc-logo-header {
+    width: 62px;
+    height: 39px;
+    margin-right: 5px;
+  }
 }
 
 /*-------------------------------------------------------------*/
@@ -304,7 +319,7 @@ nav a {
   display: none;
 }
 
-.dsc-form-global-error{
+.dsc-form-global-error {
   border: 1px solid var(--dsc-color-error);
   width: 100%;
   display: flex;

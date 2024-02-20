@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './styles.css';
-import SearchBar from '../../../components/SearchBar';
-import LoadMoreButton from '../../../components/LoadMoreButton';
-import CatalogCard from '../../../components/CatalogCard';
-import * as productService from '../../../services/product-service';
-import { useEffect, useState } from 'react';
-import { ProductDTO } from '../../../models/product';
+import "./styles.css";
+import SearchBar from "../../../components/SearchBar";
+import LoadMoreButton from "../../../components/LoadMoreButton";
+import CatalogCard from "../../../components/CatalogCard";
+import * as productService from "../../../services/product-service";
+import { useEffect, useState } from "react";
+import { ProductDTO } from "../../../models/product";
 
 type QueryParams = {
   page: number;

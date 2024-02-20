@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useState } from 'react';
-import './styles.css';
+import "./styles.css";
+import { useState } from "react";
 
 type Props = {
     onSearch: Function;

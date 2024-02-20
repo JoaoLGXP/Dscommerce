@@ -4,7 +4,7 @@ import { OrderDTO } from "../models/order";
 
 export function findByIdRequest(id: number) {
 
-    const config : AxiosRequestConfig = {
+    const config: AxiosRequestConfig = {
         url: `/orders/${id}`,
         withCredentials: true
     }
@@ -14,7 +14,7 @@ export function findByIdRequest(id: number) {
 
 export function placeOrderRequest(cart: OrderDTO) {
 
-    const config : AxiosRequestConfig = {
+    const config: AxiosRequestConfig = {
         url: "/orders",
         method: "POST",
         withCredentials: true,

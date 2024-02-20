@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import './styles.css';
-import { useEffect, useState } from 'react';
-import { OrderDTO } from '../../../models/order';
-import { useParams } from 'react-router-dom';
-import * as orderService from '../../../services/order-service';
-import ButtonInverse from '../../../components/ButtonInverse';
-import { Link } from 'react-router-dom';
+import "./styles.css";
+import { useEffect, useState } from "react";
+import { OrderDTO } from "../../../models/order";
+import { useParams } from "react-router-dom";
+import * as orderService from "../../../services/order-service";
+import ButtonInverse from "../../../components/ButtonInverse";
+import { Link } from "react-router-dom";
 
 export default function Confirmation() {
 
